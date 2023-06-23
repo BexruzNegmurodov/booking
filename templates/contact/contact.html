@@ -1,379 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<!-- Mirrored from preview.colorlib.com/theme/roberto/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Jun 2023 14:56:50 GMT -->
-<head>
-<meta charset="UTF-8">
-<meta name="description" content="">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block content %}
 
-<title>Roberto - Hotel &amp; Resort HTML Template</title>
-
-<link rel="icon" href="img/core-img/favicon.png">
-
-<link rel="stylesheet" href="style.css">
-<script nonce="256c2298-f9e4-4589-a808-4016a4dcace2">(function(w,d){!function(dK,dL,dM,dN){dK[dM]=dK[dM]||{};dK[dM].executed=[];dK.zaraz={deferred:[],listeners:[]};dK.zaraz.q=[];dK.zaraz._f=function(dO){return function(){var dP=Array.prototype.slice.call(arguments);dK.zaraz.q.push({m:dO,a:dP})}};for(const dQ of["track","set","debug"])dK.zaraz[dQ]=dK.zaraz._f(dQ);dK.zaraz.init=()=>{var dR=dL.getElementsByTagName(dN)[0],dS=dL.createElement(dN),dT=dL.getElementsByTagName("title")[0];dT&&(dK[dM].t=dL.getElementsByTagName("title")[0].text);dK[dM].x=Math.random();dK[dM].w=dK.screen.width;dK[dM].h=dK.screen.height;dK[dM].j=dK.innerHeight;dK[dM].e=dK.innerWidth;dK[dM].l=dK.location.href;dK[dM].r=dL.referrer;dK[dM].k=dK.screen.colorDepth;dK[dM].n=dL.characterSet;dK[dM].o=(new Date).getTimezoneOffset();if(dK.dataLayer)for(const dX of Object.entries(Object.entries(dataLayer).reduce(((dY,dZ)=>({...dY[1],...dZ[1]})),{})))zaraz.set(dX[0],dX[1],{scope:"page"});dK[dM].q=[];for(;dK.zaraz.q.length;){const d_=dK.zaraz.q.shift();dK[dM].q.push(d_)}dS.defer=!0;for(const ea of[localStorage,sessionStorage])Object.keys(ea||{}).filter((ec=>ec.startsWith("_zaraz_"))).forEach((eb=>{try{dK[dM]["z_"+eb.slice(7)]=JSON.parse(ea.getItem(eb))}catch{dK[dM]["z_"+eb.slice(7)]=ea.getItem(eb)}}));dS.referrerPolicy="origin";dS.src="https://preview.colorlib.com/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(dK[dM])));dR.parentNode.insertBefore(dS,dR)};["complete","interactive"].includes(dL.readyState)?zaraz.init():dK.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
-<body>
-
-<div id="preloader">
-<div class="loader"></div>
-</div>
-
-
-<header class="header-area">
-
-<div class="search-form d-flex align-items-center">
-<div class="container">
-<form action="https://preview.colorlib.com/theme/roberto/index.html" method="get">
-<input type="search" name="search-form-input" id="searchFormInput" placeholder="Type your keyword ...">
-<button type="submit"><i class="icon_search"></i></button>
-</form>
-</div>
-</div>
-
-<div class="top-header-area">
-<div class="container">
-<div class="row">
-<div class="col-6">
-<div class="top-header-content">
-<a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
-<a href="#"><i class="icon_mail"></i> <span><span class="__cf_email__" data-cfemail="f29b9c949ddc919d9e9d809e9b90b2959f939b9edc919d9f">[email&#160;protected]</span></span></a>
-</div>
-</div>
-<div class="col-6">
-<div class="top-header-content">
-
-<div class="top-social-area ml-auto">
-<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="main-header-area">
-<div class="classy-nav-container breakpoint-off">
-<div class="container">
-
-<nav class="classy-navbar justify-content-between" id="robertoNav">
-
-<a class="nav-brand" href="../home/index-2.html"><img src="img/core-img/logo.png" alt=""></a>
-
-<div class="classy-navbar-toggler">
-<span class="navbarToggler"><span></span><span></span><span></span></span>
-</div>
-
-<div class="classy-menu">
-
-<div class="classycloseIcon">
-<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-</div>
-
-<div class="classynav">
-<ul id="nav">
-<li class="active"><a href="../home/index-2.html">Home</a></li>
-<li><a href="../booking/room.html">Rooms</a></li>
-<li><a href="../home/about.html">About Us</a></li>
-<li><a href="#">Pages</a>
-<ul class="dropdown">
-<li><a href="../home/index-2.html">- Home</a></li>
-<li><a href="../booking/room.html">- Rooms</a></li>
-<li><a href="../booking/single-room.html">- Single Rooms</a></li>
-<li><a href="../home/about.html">- About Us</a></li>
-<li><a href="../blog/blog.html">- Blog</a></li>
-<li><a href="../blog/single-blog.html">- Single Blog</a></li>
-<li><a href="contact.html">- Contact</a></li>
-<li><a href="#">- Dropdown</a>
-<ul class="dropdown">
-<li><a href="#">- Dropdown Item</a></li>
-<li><a href="#">- Dropdown Item</a></li>
-<li><a href="#">- Dropdown Item</a></li>
-<li><a href="#">- Dropdown Item</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="../blog/blog.html">News</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-<div class="search-btn ml-4">
-<i class="fa fa-search" aria-hidden="true"></i>
-</div>
-
-<div class="book-now-btn ml-3 ml-lg-5">
-<a href="#">Book Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-</div>
-</div>
-
-</div>
-</nav>
-</div>
-</div>
-</div>
-</header>
-
-
-<div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/18.jpg);">
-<div class="container">
-<div class="row">
-<div class="col-12">
-<div class="breadcrumb-content text-center mt-100">
-<h2 class="page-title">Contact Us</h2>
-<nav aria-label="breadcrumb">
-<ol class="breadcrumb justify-content-center">
-<li class="breadcrumb-item"><a href="../home/index-2.html">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-</ol>
-</nav>
-</div>
-</div>
-</div>
-</div>
+<div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax"
+     style="background-image: url({% static 'img/bg-img/18.jpg' %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-content text-center mt-100">
+                    <h2 class="page-title">Contact Us</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="../home/index-2.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
 <section class="google-maps-contact-info">
-<div class="container-fluid">
-<div class="google-maps-contact-content">
-<div class="row">
+    <div class="container-fluid">
+        <div class="google-maps-contact-content">
+            <div class="row">
 
-<div class="col-6 col-lg-3">
-<div class="single-contact-info">
-<i class="fa fa-phone" aria-hidden="true"></i>
-<h4>Phone</h4>
-<p>+01-234-567-890</p>
-</div>
-</div>
+                <div class="col-6 col-lg-3">
+                    <div class="single-contact-info">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <h4>Phone</h4>
+                        <p>+01-234-567-890</p>
+                    </div>
+                </div>
 
-<div class="col-6 col-lg-3">
-<div class="single-contact-info">
- <i class="fa fa-map-marker" aria-hidden="true"></i>
-<h4>Address</h4>
-<p>Iris Watson, 283 Fusce Rd,NY</p>
-</div>
-</div>
+                <div class="col-6 col-lg-3">
+                    <div class="single-contact-info">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <h4>Address</h4>
+                        <p>Iris Watson, 283 Fusce Rd,NY</p>
+                    </div>
+                </div>
 
-<div class="col-6 col-lg-3">
-<div class="single-contact-info">
-<i class="fa fa-clock-o" aria-hidden="true"></i>
-<h4>Open time</h4>
-<p>10:00 am to 23:00 pm</p>
-</div>
-</div>
+                <div class="col-6 col-lg-3">
+                    <div class="single-contact-info">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <h4>Open time</h4>
+                        <p>10:00 am to 23:00 pm</p>
+                    </div>
+                </div>
 
-<div class="col-6 col-lg-3">
-<div class="single-contact-info">
-<i class="fa fa-envelope-o" aria-hidden="true"></i>
-<h4>Email</h4>
-<p>Info.colorlib @gmail.com</p>
-</div>
-</div>
-</div>
+                <div class="col-6 col-lg-3">
+                    <div class="single-contact-info">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <h4>Email</h4>
+                        <p>Info.colorlib @gmail.com</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="google-maps">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82774.69671830302!2d24.077286625210185!3d56.96328499537209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2sRiga%2C+Latvia!5e0!3m2!1sen!2sbd!4v1549536732147" allowfullscreen></iframe>
-</div>
-</div>
-</div>
+            <div class="google-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82774.69671830302!2d24.077286625210185!3d56.96328499537209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2sRiga%2C+Latvia!5e0!3m2!1sen!2sbd!4v1549536732147"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 <div class="roberto-contact-form-area section-padding-100">
-<div class="container">
-<div class="row">
-<div class="col-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
 
-<div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-<h6>Contact Us</h6>
-<h2>Leave Message</h2>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-12">
+                <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                    <h6>Contact Us</h6>
+                    <h2>Leave Message</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
 
-<div class="roberto-contact-form">
-<form action="#" method="post">
-<div class="row">
-<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-<input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
-</div>
-<div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-<input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
-</div>
-<div class="col-12 wow fadeInUp" data-wow-delay="100ms">
-<textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
-</div>
-<div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
-<button type="submit" class="btn roberto-btn mt-15">Send Message</button>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<section class="roberto-cta-area">
-<div class="container">
-<div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
-<div class="row align-items-center">
-<div class="col-12 col-md-7">
-<div class="cta-text mb-50">
-<h2>Contact us now!</h2>
-<h6>Contact (+12) 345-678-9999 to book directly or for advice</h6>
-</div>
-</div>
-<div class="col-12 col-md-5 text-right">
-<a href="#" class="btn roberto-btn mb-50">Contact Now</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<div class="partner-area">
-<div class="container">
-<div class="row">
-<div class="col-12">
-<div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-
-<a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-
-<a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-
-<a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-
-<a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-
-<a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
-</div>
-</div>
-</div>
-</div>
+                <div class="roberto-contact-form">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <input type="text" name="message-name" class="form-control mb-30"
+                                       placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <input type="email" name="message-email" class="form-control mb-30"
+                                       placeholder="Your Email">
+                            </div>
+                            <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
+                                <textarea name="message" class="form-control mb-30"
+                                          placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
+                                <button type="submit" class="btn roberto-btn mt-15">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<footer class="footer-area section-padding-80-0">
-
-<div class="main-footer-area">
-<div class="container">
-<div class="row align-items-baseline justify-content-between">
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<a href="#" class="footer-logo"><img src="img/core-img/logo2.png" alt=""></a>
-<h4>+12 345-678-9999</h4>
-<span><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80c9eee6efaee3efeceff2ece9e2c0e7ede1e9ecaee3efed">[email&#160;protected]</a></span>
-<span>856 Cordia Extension Apt. 356, Lake Deangeloburgh, South Africa</span>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<h5 class="widget-title">Our Blog</h5>
-
-<div class="latest-blog-area">
-<a href="#" class="post-title">Freelance Design Tricks How</a>
-<span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
-</div>
-
-<div class="latest-blog-area">
-<a href="#" class="post-title">Free Advertising For Your Online</a>
-<span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
-</div>
-</div>
-</div>
-
-<div class="col-12 col-sm-4 col-lg-2">
-<div class="single-footer-widget mb-80">
-
-<h5 class="widget-title">Links</h5>
-
-<ul class="footer-nav">
-<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
-<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
-<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
-</ul>
-</div>
-</div>
-
-<div class="col-12 col-sm-8 col-lg-4">
-<div class="single-footer-widget mb-80">
-
-<h5 class="widget-title">Subscribe Newsletter</h5>
-<span>Subscribe our newsletter gor get notification about new updates.</span>
-
-<form action="https://preview.colorlib.com/theme/roberto/index.html" class="nl-form">
-<input type="email" class="form-control" placeholder="Enter your email...">
-<button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="container">
-<div class="copywrite-content">
-<div class="row align-items-center">
-<div class="col-12 col-md-8">
-
-<div class="copywrite-text">
-<p>
-Copyright &copy;<script data-cfasync="false" src="https://preview.colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-</p>
-</div>
-</div>
-<div class="col-12 col-md-4">
-
-<div class="social-info">
-<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-
-
-<script src="js/jquery.min.js"></script>
-
-<script src="js/popper.min.js"></script>
-
-<script src="js/bootstrap.min.js"></script>
-
-<script src="js/roberto.bundle.js"></script>
-
-<script src="js/default-assets/active.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7db554b4e8ca04ff","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
-</body>
-
-<!-- Mirrored from preview.colorlib.com/theme/roberto/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Jun 2023 14:56:50 GMT -->
-</html>
+{% endblock %}

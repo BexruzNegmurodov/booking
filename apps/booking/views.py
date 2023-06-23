@@ -1,3 +1,17 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def room(request):
+    ctx = {
+
+    }
+    return render(request, 'booking/room.html', ctx)
+
+
+def room_detail(request, slug):
+    ctx = {
+
+    }
+    return render(request, 'booking/single-room.html', ctx)
+
+
