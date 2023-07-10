@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
 
+{% block content %}
+    <link rel="stylesheet" href="{% static 'my_css/my_css.css' %}">
 <div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax"
      style="background-image: url({% static 'img/bg-img/18.jpg' %});">
     <div class="container">
@@ -32,7 +33,7 @@
                     <div class="single-contact-info">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <h4>Phone</h4>
-                        <p>+01-234-567-890</p>
+                        <p>+998(77)-777-77-77</p>
                     </div>
                 </div>
 
@@ -40,7 +41,7 @@
                     <div class="single-contact-info">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <h4>Address</h4>
-                        <p>Iris Watson, 283 Fusce Rd,NY</p>
+                        <p>Uzbekistan Tashkent </p>
                     </div>
                 </div>
 
@@ -62,8 +63,7 @@
             </div>
 
             <div class="google-maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82774.69671830302!2d24.077286625210185!3d56.96328499537209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2sRiga%2C+Latvia!5e0!3m2!1sen!2sbd!4v1549536732147"
-                        allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.8850558120766!2d69.27780729157644!3d41.31136409733382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2bec875291%3A0x22b5bc120c7e164!2sUzbekistan%20Hotel!5e0!3m2!1sru!2s!4v1688473609721!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -85,19 +85,17 @@
             <div class="col-12">
 
                 <div class="roberto-contact-form">
-                    <form action="#" method="post">
+                    <form method="post">
+                        {% csrf_token %}
                         <div class="row">
-                            <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                <input type="text" name="message-name" class="form-control mb-30"
-                                       placeholder="Your Name">
+                           <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                {{ form.name }}
                             </div>
                             <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                <input type="email" name="message-email" class="form-control mb-30"
-                                       placeholder="Your Email">
+                                {{ form.email }}
                             </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
-                                <textarea name="message" class="form-control mb-30"
-                                          placeholder="Your Message"></textarea>
+                            <div class="col-12 wow fadeInUp" data-wow-delay="100ms" >
+                               {{ form.message }}
                             </div>
                             <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
                                 <button type="submit" class="btn roberto-btn mt-15">Send Message</button>

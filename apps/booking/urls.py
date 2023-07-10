@@ -5,5 +5,5 @@ app_name = 'booking'
 
 urlpatterns = [
     path('room/', room, name='room'),
-    path('room/detail/<slug:slug>/', room_detail, name='room_detail'),
+    path('room/detail/<int:day>/<int:month>/<int:year>/<slug:slug> ', room_detail, name='room_detail'),
 ]

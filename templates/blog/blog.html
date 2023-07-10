@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 
     <div class="breadcrumb-area bg-img bg-overlay jarallax"
@@ -28,37 +27,29 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
 
+                    {% for object in objects %}
+                        <div class="single-blog-post d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="500ms">
 
-                    <div class="single-blog-post d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="500ms">
-
-                        <div class="post-thumbnail">
-                            <a href="#"><img src="{% static 'img/bg-img/28.jpg' %}" alt=""></a>
-                        </div>
-
-                        <div class="post-content">
-
-                            <div class="post-meta">
-                                <a href="#" class="post-author">Jan 29, 2019</a>
-                                <a href="#" class="post-tutorial">Event</a>
+                            <div class="post-thumbnail">
+                                <a href="#"><img src="{{ object.image_blog_set.first.image.url }}" alt=""></a>
                             </div>
 
-                            <a href="#" class="post-title">Les Houches The Hidden Gem Of The Chamonix Valley</a>
-                            <p>Las Vegas has more than 100,000 hotel rooms to choose from. There is something for every
-                                budget, and enough entertainment within walking distance to keep anyone occupied for
-                                months.</p>
-                            <a href="#" class="btn continue-btn">Read More</a>
+                            <div class="post-content">
+
+                                <div class="post-meta">
+                                    <a href="#" class="post-author">{{ object.created_date|date:'M d, Y' }}</a>
+                                    <a href="#" class="post-tutorial">Event</a>
+                                </div>
+
+                                <a href="#" class="post-title">{{ object.title }}</a>
+                                <p>{{ object.description|safe|slice:150 }}...</p>
+                                <a href="{{ object.full_url }}" class="btn continue-btn " >Read More --></a>
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
 
                     <nav class="roberto-pagination wow fadeInUp mb-100" data-wow-delay="600ms">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next <i
-                                    class="fa fa-angle-right"></i></a>
-                            </li>
-                        </ul>
+                        {% include 'pagination.html' %}
                     </nav>
                 </div>
                 <div class="col-12 col-sm-8 col-md-6 col-lg-4">
@@ -79,26 +70,21 @@
                         <div class="single-widget-area mb-100">
                             <h4 class="widget-title mb-30">Recent News</h4>
 
-
-
-                            <div class="single-recent-post d-flex">
-
-                                <div class="post-thumb">
-                                    <a href="single-blog.html"><img src="{% static 'img/bg-img/29.jpg' %}" alt=""></a>
-                                </div>
-
-                                <div class="post-content">
-
-                                    <div class="post-meta">
-                                        <a href="#" class="post-author">Jan 29, 2019</a>
-                                        <a href="#" class="post-tutorial">Event</a>
+                                {% for i in new %}
+                                    <div class="single-recent-post d-flex">
+                                        <div class="post-thumb">
+                                            <a href="{{ i.full_url }}"><img src="{{ i.image_blog_set.first.image.url }}"
+                                                                            alt=""></a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="post-meta">
+                                                <a href="{{ i.full_url }}" class="post-author">{{ i.created_date|date:'M d, Y' }}</a>
+                                                <a href="{{ i.full_url }}" class="post-tutorial">Event</a>
+                                            </div>
+                                            <a href="{{ i.full_url }}" class="post-title">{{ i.title }}</a>
+                                        </div>
                                     </div>
-                                    <a href="single-blog.html" class="post-title">Proven Techniques Help You Herbal
-                                        Breast</a>
-                                </div>
-                            </div>
-
-
+                                {% endfor %}
 
                         </div>
 
@@ -106,18 +92,11 @@
                             <h4 class="widget-title mb-30">Tags</h4>
 
                             <ul class="popular-tags">
-                                <li><a href="#">Bed,</a></li>
-                                <li><a href="#">Hotel,</a></li>
-                                <li><a href="#">Travel,</a></li>
-                                <li><a href="#">Restaurant,</a></li>
-                                <li><a href="#">Sport,</a></li>
-                                <li><a href="#">Trip,</a></li>
-                                <li><a href="#">Music,</a></li>
-                                <li><a href="#">Holiday,</a></li>
-                                <li><a href="#">Tourist,</a></li>
-                                <li><a href="#">Foody,</a></li>
-                                <li><a href="#">Resorts.</a></li>
+                                {% for tag in tags %}
+                                    <li><a href="{% url 'blog:blog' %}?tag={{ tag }}">{{ tag }}, </a></li>
+                                {% endfor %}
                             </ul>
+
                         </div>
 
                         <div class="single-widget-area mb-100 clearfix">

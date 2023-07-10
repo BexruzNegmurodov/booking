@@ -1,181 +1,225 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load range %}
 
 {% block content %}
-
-<div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/16.jpg' %});">
-    <div class="container h-100">
-        <div class="row h-100 align-items-end">
-            <div class="col-12">
-                <div class="breadcrumb-content d-flex align-items-center justify-content-between pb-5">
-                    <h2 class="room-title">Room View Sea</h2>
-                    <h2 class="room-price">$180 <span>/ Per Night</span></h2>
+    <link rel="stylesheet" href="{% static 'my_css/my_css.css' %}">
+    <div class="breadcrumb-area bg-img bg-overlay jarallax"
+         style="background-image: url({% static 'img/bg-img/16.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-12">
+                    <div class="breadcrumb-content d-flex align-items-center justify-content-between pb-5">
+                        <h2 class="room-title">{{ obj.name }}</h2>
+                        <h2 class="room-price">$ {{ obj.price }} <span>/ Per Night</span></h2>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="roberto-rooms-area section-padding-100-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-8">
+    <div class="roberto-rooms-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
 
-                <div class="single-room-details-area mb-50">
+                    <div class="single-room-details-area mb-50">
 
-                    <div class="room-thumbnail-slides mb-50">
-                        <div id="room-thumbnail--slide" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
+                        <div class="room-thumbnail-slides mb-50">
+                            <div id="room-thumbnail--slide" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
 
-                                <div class="carousel-item active">
-                                    <img src="{% static 'img/bg-img/48.jpg' %}" class="d-block w-100" alt="">
-                                </div>
-
-                            </div>
-                            <ol class="carousel-indicators">
-
-                                <li data-target="#room-thumbnail--slide" data-slide-to="4">
-                                    <img src="{% static 'img/bg-img/52.jpg' %}" class="d-block w-100" alt="">
-                                </li>
-
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="room-features-area d-flex flex-wrap mb-50">
-                        <h6>Size: <span>350-425sqf</span></h6>
-                        <h6>Capacity: <span>Max persion 5</span></h6>
-                        <h6>Bed: <span>King beds</span></h6>
-                        <h6>Services: <span>Wifi, television ...</span></h6>
-                    </div>
-                    <p>If you live in New York City or travel to and from New York City a lot, you know all about the
-                        traffic there. Getting places is often next to impossible, even with the gazillion yellow cabs.
-                        If you’re like me you often look with envy at those shiny limousines with their unformed drivers
-                        and wish you could sit in one. Well, you can. New York limo service is more affordable than you
-                        think, whether it’s for Newark airport transportation, LaGuardia airport transportation, or to
-                        drive wherever you wish to go.</p>
-                    <ul>
-                        <li><i class="fa fa-check"></i> Mauris molestie lectus in irdiet auctor.</li>
-                        <li><i class="fa fa-check"></i> Dictum purus at blandit molestie.</li>
-                        <li><i class="fa fa-check"></i> Neque non fermentum suscipit.</li>
-                        <li><i class="fa fa-check"></i> Donec id dui ac massa malesuada.</li>
-                        <li><i class="fa fa-check"></i> In sit amet sapien quis orci maximus.</li>
-                        <li><i class="fa fa-check"></i> Vestibulum rutrum diam vel eros tristique.</li>
-                    </ul>
-                    <p>Every time I hail a cab in New York City or wait for one at the airports, I hope I’ll be lucky
-                        enough to get one that’s halfway decent and that the driver actually speaks English. I have
-                        spent many anxious moments wondering if I ever get to my destination. Or whether I’d get ripped
-                        off. Even if all goes well, I can’t say I can remember many rides in New York cabs that were
-                        very pleasant. And given how much they cost by now, going with a limo makes ever more sense.</p>
-                </div>
-
-                <div class="room-service mb-50">
-                    <h4>Room Services</h4>
-                    <ul>
-                        <li><img src="{% static 'img/core-img/icon1.png' %}" alt=""> Air Conditioning</li>
-                        <li><img src="{% static 'img/core-img/icon2.png' %}" alt=""> Free drinks</li>
-                        <li><img src="{% static 'img/core-img/icon3.png' %}" alt=""> Restaurant quality</li>
-                        <li><img src="{% static 'img/core-img/icon4.png' %}" alt=""> Cable TV</li>
-                        <li><img src="{% static 'img/core-img/icon5.png' %}" alt=""> Unlimited Wifi</li>
-                        <li><img src="{% static 'img/core-img/icon6.png' %}" alt=""> Service 24/24</li>
-                    </ul>
-                </div>
-
-                <div class="room-review-area mb-100">
-                    <h4>Room Review</h4>
-
-                    <div class="single-room-review-area d-flex align-items-center">
-                        <div class="reviwer-thumbnail">
-                            <img src="{% static 'img/bg-img/53.jpg' %}" alt="">
-                        </div>
-                        <div class="reviwer-content">
-                            <div class="reviwer-title-rating d-flex align-items-center justify-content-between">
-                                <div class="reviwer-title">
-                                    <span>27 Aug 2019</span>
-                                    <h6>Brandon Kelley</h6>
-                                </div>
-                                <div class="reviwer-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                                velit, sed quia non numquam eius modi tempora.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-
-                <div class="hotel-reservation--area mb-100">
-                    <form action="#" method="post">
-                        <div class="form-group mb-30">
-                            <label for="checkInDate">Date</label>
-                            <div class="input-daterange" id="datepicker">
-                                <div class="row no-gutters">
-                                    <div class="col-6">
-                                        <input type="text" class="input-small form-control" name="checkInDate"
-                                               id="checkInDate" placeholder="Check In">
+                                    <div class="carousel-item active">
+                                        <img src="{{ obj.roomimage_set.first.image.url }}" class="d-block w-100" alt="">
                                     </div>
-                                    <div class="col-6">
-                                        <input type="text" class="input-small form-control" name="checkOutDate"
-                                               placeholder="Check Out">
-                                    </div>
+
                                 </div>
+                                <ol class="carousel-indicators">
+                                    {% for img in obj.roomimage_set.all %}
+                                        <li data-target="#room-thumbnail--slide" data-slide-to="4">
+                                            <img src="{{ img.image.url }}" class="d-block w-100" alt="">
+                                        </li>
+                                    {% endfor %}
+                                </ol>
                             </div>
                         </div>
-                        <div class="form-group mb-30">
-                            <label for="guests">Guests</label>
+
+                        <div class="room-features-area d-flex flex-wrap mb-50">
+                            <h6>Size: <span>{{ obj.size }}</span></h6>
+                            <h6>Capacity: <span>Max persion {{ obj.capacity }}</span></h6>
+                            <h6>Bed: <span>King beds</span></h6>
+                            <h6>Services:
+                                {% for service in obj.services.all %}
+                                    <span>{{ service }}, </span>
+                                {% endfor %}
+                            </h6>
+
+                        </div>
+                        {{ obj.message|safe }}
+                    </div>
+
+                    <div class="room-service mb-50">
+                        <h4>Room Services</h4>
+                        <ul>
+                            {% for service in obj.services.all %}
+                                <li><img src="{{ service.image.url }}" alt=""> {{ service.name }}</li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+
+                    <div class="room-review-area mb-100">
+                        <h4>Room Review</h4>
+                        {% for i in review %}
+                            <div class="single-room-review-area d-flex align-items-center">
+                                <div class="reviwer-thumbnail">
+                                    {% if i.image %}
+                                        <img src="{{ i.image.url }}" alt="">
+                                    {% else %}
+                                        <img src="{% static 'img/comment/unnamed.jpg' %}" alt="">
+                                    {% endif %}
+
+                                </div>
+                                <div class="reviwer-content">
+                                    <div class="reviwer-title-rating d-flex align-items-center justify-content-between">
+                                        <div class="reviwer-title">
+                                            <span>{{ i.created_date|date:"M d Y" }}</span>
+                                            <h6>{{ i.name }}</h6>
+                                        </div>
+                                        <div class="reviwer-rating">
+                                            {% for i in 1|range_filter:i.mark %}
+                                                <i class="fa fa-star"></i>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <p>{{ i.message }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="roberto-contact-form mt-80 mb-100">
+                        <h2> Comment</h2>
+
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row">
-                                <div class="col-6">
-                                    <select name="adults" id="guests" class="form-control">
-                                        <option value="adults">Adults</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                    </select>
+                                <div class="col-12">
+                                    {{ form.name }}
                                 </div>
-                                <div class="col-6">
-                                    <select name="children" id="children" class="form-control">
-                                        <option value="children">Children</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                    </select>
+                                <div class="col-12">
+                                    {{ form.image }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form.email }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form.message }}
+                                </div>
+                                <div class="rating">
+                                    <input type="radio" name="rating" id="star5" value="5"
+                                           onclick="copyLabelToField(this)">
+                                    <label for="star5"></label>
+                                    <input type="radio" name="rating" id="star4" value="4"
+                                           onclick="copyLabelToField(this)">
+                                    <label for="star4"></label>
+                                    <input type="radio" name="rating" id="star3" value="3"
+                                           onclick="copyLabelToField(this)">
+                                    <label for="star3"></label>
+                                    <input type="radio" name="rating" id="star2" value="2"
+                                           onclick="copyLabelToField(this)">
+                                    <label for="star2"></label>
+                                    <input type="radio" name="rating" id="star1" value="1"
+                                           onclick="copyLabelToField(this)">
+                                    <label for="star1"></label>
+                                </div>
+                                <input type="hidden" name="mark" id="mark">
+                                <div class="col-12">
+                                    <button type="submit" class="btn roberto-btn btn-3 mt-15">Post Comment</button>
+                                </div>
+                                <script>
+                                    function copyLabelToField(radio) {
+                                        const label = document.querySelector(`label[for=${radio.id}]`);
+                                        const markField = document.getElementById("mark");
+                                        const value = label.textContent.trim().split(" ")[0];
+                                        markField.value = (value === "") ? radio.value : value;
+                                    }
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4">
+
+                    <div class="hotel-reservation--area mb-100">
+                        <form action="#" method="post">
+                            <div class="form-group mb-30">
+                                <label for="checkInDate">Date</label>
+                                <div class="input-daterange" id="datepicker">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <input type="text" class="input-small form-control" name="checkInDate"
+                                                   id="checkInDate" placeholder="Check In">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" class="input-small form-control" name="checkOutDate"
+                                                   placeholder="Check Out">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mb-50">
-                            <div class="slider-range">
-                                <div class="range-price">Max Price: $0 - $3000</div>
-                                <div data-min="0" data-max="3000" data-unit="$"
-                                     class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
-                                     data-value-min="0" data-value-max="3000" data-label-result="Max Price: ">
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                    <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                    <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                            <div class="form-group mb-30">
+                                <label for="guests">Guests</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <select name="adults" id="guests" class="form-control">
+                                            <option value="adults">Adults</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="children" id="children" class="form-control">
+                                            <option value="children">Children</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn roberto-btn w-100">Check Available</button>
-                        </div>
-                    </form>
+                            <div class="form-group mb-50">
+                                <div class="slider-range">
+                                    <div class="range-price">Max Price: $0 - $3000</div>
+                                    <div data-min="0" data-max="3000" data-unit="$"
+                                         class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                         data-value-min="0" data-value-max="3000" data-label-result="Max Price: ">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all"
+                                              tabindex="0"></span>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all"
+                                              tabindex="0"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn roberto-btn w-100">Check Available</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

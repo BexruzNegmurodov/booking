@@ -1,3 +1,4 @@
+{% load static %}
 <header class="header-area">
 
     <div class="search-form d-flex align-items-center">
@@ -41,9 +42,10 @@
 
                 <nav class="classy-navbar justify-content-between" id="robertoNav">
 
-                    <a class="nav-brand" href="index-2.html"><img src="img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand"
+                       href="{% url 'home:index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
 
-                    <div class="classy-navbar-toggler">
+                    <div class=" classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
                     </div>
 
@@ -55,18 +57,18 @@
 
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="index-2.html">Home</a></li>
-                                <li><a href="../booking/room.html">Rooms</a></li>
-                                <li><a href="about.html">About Us</a></li>
+                                <li class="active"><a href="{% url 'home:index' %}">Home</a></li>
+                                <li><a href="{% url 'booking:room' %}">Rooms</a></li>
+                                <li><a href="{% url 'home:about' %}">About Us</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="index-2.html">- Home</a></li>
-                                        <li><a href="../booking/room.html">- Rooms</a></li>
-                                        <li><a href="../booking/single-room.html">- Single Rooms</a></li>
-                                        <li><a href="about.html">- About Us</a></li>
-                                        <li><a href="../blog/blog.html">- Blog</a></li>
-                                        <li><a href="../blog/single-blog.html">- Single Blog</a></li>
-                                        <li><a href="../contact/contact.html">- Contact</a></li>
+                                        <li><a href="{% url 'home:index' %}">- Home</a></li>
+                                        <li><a href="{% url 'booking:room' %}">- Rooms</a></li>
+{#                                        <li><a href="{% url 'booking:room_detail'  %}">- Single Rooms</a></li>#}
+                                        <li><a href="{% url 'home:about' %}">- About Us</a></li>
+                                        <li><a href="{% url 'blog:blog' %}">- Blog</a></li>
+{#                                        <li><a href="{% url 'blog:blog_detail' %}">- Single Blog</a></li>#}
+                                        <li><a href="{% url 'contact:contact' %}">- Contact</a></li>
                                         <li><a href="#">- Dropdown</a>
                                             <ul class="dropdown">
                                                 <li><a href="#">- Dropdown Item</a></li>
@@ -77,8 +79,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="../blog/blog.html">News</a></li>
-                                <li><a href="../contact/contact.html">Contact</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="{% url 'contact:contact' %}">Contact</a></li>
                             </ul>
 
                             <div class="search-btn ml-4">
